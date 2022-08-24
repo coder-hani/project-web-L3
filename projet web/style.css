@@ -1,0 +1,457 @@
+/* -------  Importation de polices à partir de Google Fonts ------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;  /* réglage de la marge à 0 */
+    padding: 0;  /* réglage de la marge à 0 */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ------- Fin d'Importation de polices à partir de Google Fonts ------- */
+
+
+
+ /* ------- Changement la couleur de fond du Body ------- */
+body{
+    background: #007bff; /* la couleur d'arrière-plan du corps est définie sur #007bff */
+}
+/* ------- Fin de Changement la couleur de fond du Body ------- */
+
+
+
+/* ------- Modification de la couleur et background-color lors de la sélection ------- */
+::selection{
+    color: #fff;    /* cla couleur du texte lorsqu'il est sélectionné est #fff */
+    background: #007bff; /* la couleur d'arrière-plan du texte sélectionné est définie #007bff */
+}
+/* ------- Fin de Modification de la couleur et background-color lors de la sélection ------- */
+
+
+
+/* ------- Styliser  start button, info box, quiz box and result box ------- */
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;  /* Haut marge  à 50 % */
+    left: 50%;  /* la marge de gauche est de 50 % */
+    transform: translate(-50%, -50%); /* en utilisant la transformation pour les placer au milieu de la page*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);  /* fixer shadow des cases*/
+}
+/* ------- Fin de Styliser  start button, info box, quiz box and result box ------- */
+
+
+
+/* ------- Styling info_box, quiz box et result box lorsqu'ils sont actifs ------- */
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult{
+    opacity: 1; /* mettre l'opacité à 1 */
+    z-index: 5; 
+    pointer-events: auto; 
+    transform: translate(-50%, -50%) scale(1); /* augmenter la taille des boîtes après le démarrage */
+}
+/* ------- Fin de Styling info_box, quiz box et result box lorsqu'ils sont actifs  ------- */
+
+
+
+/* ------- Styling start button ------- */
+.start_btn button{
+    font-size: 25px;  
+    font-weight: 500; 
+    color: #007bff;
+    padding: 15px 30px; /* setting the top and bottom padding to 15px and right and left padding to 30px */
+    outline: none; /* removing the outline of the button*/
+    border: none; /* removing the border of the button */
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer; /* changer le style du curseur*/
+    transition: 520ms; /* transition duration */
+}
+.start_btn:hover button{ /* changing the background color and the text color of the button when hovering*/
+background-color: #007bff; 
+color: white;
+}
+/* ------- Fin de Styling start button ------- */
+
+
+
+/* ------- Styling info_box et ses composants ------- */
+.info_box{
+    width: 540px; /* setting the width of the info_box to 540px */
+    background: #fff;  /* changing the background color of info_box */
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9); 
+    opacity: 0; /* setting the opacity to 0 */
+    pointer-events: none; /* no pointer events */
+    transition: all 0.3s ease; /* using transition when displaying the info box */
+}
+
+.info_box .info-title{
+    height: 60px; /* changing the height of the title on the info_box*/
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex; /* setting the display to flex*/
+    align-items: center; /* aligning the items to center of the box*/
+    padding: 0 30px; /* using 0 top and bottom padding and 30px left and right padding*/
+    border-radius: 5px 5px 0 0; /* border radius to 5px top and left and 0 for bottom and right*/
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info-list{ /* styling the info list */
+    padding: 15px 30px; /* padding to 15px top and bottom and 30px left and right*/
+}
+
+.info_box .info-list .info{ /* styling info on the info_box*/
+    margin: 5px 0; /* margin top and bottom to 5px and left and right to 0 */
+    font-size: 17px; /* setting the font size to 17px */
+}
+
+.info_box .info-list .info span{
+    font-weight: 600;
+    color: #007bff;
+}
+.info_box .buttons{ /* styling the class buttons on the info box */
+    height: 60px; /* height of the butttons to 60px*/
+    display: flex; /* setting the display to flex*/
+    align-items: center;
+    justify-content: flex-end; /* putting the elements on the end of the flex */
+    padding: 0 30px; /* padding top and bottom 0 and left and right 30px */
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button{ /* styling the button on the info box */
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500; /* setting the font weight to 500 */
+    cursor: pointer; /* changer le style du curseur */
+    border: none;
+    outline: none;
+    border-radius: 5px; /* définir le rayon de la bordure à 5px */
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
+/* ------- Fin de Styling info_box et ses composants ------- */
+
+
+
+/* ------- Styling quiz box et ses composants ------- --------------*/
+.quiz_box{
+    width: 550px; /* définir la largeur de quiz_box à 500px */
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9); /* positionner la quiz_box */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease; /* définir une transition sur la quiz_box */
+}
+
+.quiz_box header{ /* styliser l'en-tête du quiz_box */
+    position: relative; /* réglage de la position relative */
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex; /* régler l'affichage sur flex*/
+    align-items: center;
+    justify-content: space-between; /* mettre de l'espace entre les éléments */
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1); /* définir shadow pour le quiz_box */
+}
+
+.quiz_box header .title{ /* styliser le titre sur header */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box header .timer{ /* styliser la minuterie sur  header */
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex; /* régler l'affichage sur flex*/
+    align-items: center; /* mettre les éléments au centre */
+    justify-content: space-between; /* mettre de l'espace entre les éléments */
+    width: 145px;
+}
+
+.quiz_box header .timer .time_left_txt{ /* styliser le temps restant sur le header */
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;  /* définir l'utilisateur sélectionner l'utilisateur sur aucun */
+}
+
+.quiz_box header .timer .timer_sec{ /* styliser la minuterie */
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz_box header .time_line{ /* styliser le time_line sur le header */
+    position: absolute; /* mettre la position en absolu */
+    bottom: 0px;
+    left: 0px; /* mettre la marge de gauche à 0 */
+    height: 3px;
+    background: #007bff;
+}
+/* ------- Fin de Styling quiz box et ses composants ------- */
+
+
+
+/* ------- Style de section quiz box ------- */
+section{ /* styling  section */
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+section .que_text{ /* styling La partie question */
+    font-size: 25px;
+    font-weight: 600;
+}
+
+section .option_list{ /* styliser la liste d'options */
+    padding: 20px 0px;
+    display: block;    /* réglage de l'affichage block */
+}
+
+section .option_list .option{  /* styling chaque option */
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px; /* définir la taille de la police sur 17*/
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex; /* régler l'affichage sur flex*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .option_list .option:last-child{ /* styliser la dernière option de la liste */
+    margin-bottom: 0px;
+}
+
+section .option_list .option:hover{ /* styliser option lorsque hover */
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+section .option_list .option.correct{ /* styliser option lorsque correct*/
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+section .option_list .option.incorrect{ /* styliser option when incorrect */
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+section .option_list .option.disabled{ /* styliser option when disabled */
+    pointer-events: none; /* désactivation du pointeur  */
+}
+
+section .option_list .option .icon{ /* styliser les icons */
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent; /* définir la bordure sur transparent */
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+.option_list .option .icon.tick{ /* styliser l'icon correct */
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.option_list .option .icon.cross{ /* styliser l'icon incorrect  */
+    color: #a42834;
+    background: #f8d7da;
+    border-color: #a42834;
+}
+
+/* ------- Fin de Style de section quiz box  ------- */
+
+
+
+/* ------- Style de footer ------- */
+footer{ /* styliser  footer */
+    height: 60px;
+    padding: 0 30px;
+    display: flex; /* régler l'affichage sur flex*/
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+footer .total_que span{
+    display: flex; /* régler l'affichage sur flex*/
+    user-select: none;
+}
+
+footer .total_que span p{  /* styliser le paragaphe */
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .total_que span p:first-child{
+    padding-left: 0px;
+}
+
+footer button{ /* styliser le bouton de footer */
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer; /* définir le curseur sur le pointeur */
+    border: none;
+    outline: none; 
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px; /* réglage de la hauteur de ligne à 10px */
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer button:hover{ /* styliser le bouton lorsque hover */
+    background: #0263ca;
+}
+
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+/* ------- Fin de Style de footer ------- */
+
+
+
+/* ------- Styling result_box et ses composants ------- */
+.result_box{
+    background: #fff; /* définir la couleur d'arrière-plan de result_box*/
+    border-radius: 5px;
+    display: flex; /* régler l'affichage sur flex*/
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column; /* définition de la direction des éléments  */
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.result_box .icon{ /*styliser l'icône result_box */
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.result_box .complete_text{ /*styliser le texte complet result_box */
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result_box .score_text span{ /* styliser la partition */
+    display: flex; /* régler l'affichage sur flex*/
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result_box .score_text span p{
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.result_box .buttons{
+    display: flex; /* régler l'affichage sur flex*/
+    margin: 20px 0;
+}
+
+.result_box .buttons button{ /* styliser les boutons result_box */
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
+/* ------- Fin de Styling result_box et ses composants ------- */
+
+
+
+/* ------- Styling les boutons dans result_box ------- */
+.buttons button.restart{ /* styliser le bouton de redémarrage */
+    color: #fff;
+    background: #007bff;
+}
+
+.buttons button.restart:hover{ /* styliser le bouton de redémarrage lorsque hover */
+    background: #0263ca;
+}
+
+.buttons button.quit{/* styliser le bouton Quitter */
+    color: #007bff;
+    background: #fff;
+}
+
+.buttons button.quit:hover{/* styliser le bouton Quitter lorsque hover */
+    color: #fff;
+    background: #007bff;
+}
+
+/* ------- Fin de Styling les boutons dans result_box ------- */
+
+
+
+/* ------- Style du Barre de progression   ------- */
+#bar-container { /* styliser le conteneur de bar  */
+ 
+  margin : auto ; 
+  width : 150px;
+  height : 50px;
+  margin-left : 20px;
+  border-radius : 50px;
+  overflow : hidden ; /* définir le débordement sur masqué  */
+  margin-top : 10px;
+}
+
+#bar{  /* styliser la barre de progression */
+  background-color : #007bff;
+  width : 0px;
+  height : 100px; 
+}
+
+/* ------- Fin de Style du Barre de progression  ------- */
