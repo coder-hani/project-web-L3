@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <!-- تعريف المتصفح باللغة العربية -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="quiz.css"> 
+    <!-- ربط مع css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&family=Poppins:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- تحميل الخط من google -->
+<title>ELquiz</title>
+</head>
+<!-- اضافة الكلاسات مع العناصر يساعد في التحكم و التلاعب من ناحية css -->
+<body>
+   <nav>
+     <div class="contanire nav_c" id="home"> 
+       <!-- إنشاء كلاس الحاوي مع حاوية nav-c -->
+         <ul class="nav_items">
+           <!--ul انشاء عناصر nav-iteams -->
+           <!-- عناصر القائمة مع الروابط -->
+             <li><a href="#home">الصفحة الرئيسية</a></li>
+             <li><a href="#about">أقسام اللعبة</a></li>
+             <li><a href="#faqs">الأسئلة</a></li>
+         </ul>
+         <a class="nav_logo">
+             <h3>ELquiz app</h3>
+         <!-- من أجل عنوان الشريط nav 
+        يكون داخل كلاس navlogo-->
+            </a>
+        <img src="imga.png"> 
+        <!-- logo الجانبي -->
+     </div>
+   </nav>
+   <!-- (الشريط الثابت)نهاية nav -->
+   <!-- بداية header -->
+   <header>
+     <!-- المحتوى المقدمة  -->
+    <div class="contanire header_container">
+      <!-- إنشاء كلاس الحاوية مع محتوى header-container -->
+        <h1 class="hdr_title">welecome to elQuizz <br/>Applicaton</h1>
+        <!-- العنوان في كلاس hdr_title + br العودة الى سطر جديد -->
+    <p class="lead" >مرحبا بك في اللعبة الكويز 
+        إذا كنت من عشاق أسئلة متنوعة لدينا أجمل تشكيلة تقدم لك معلومات رائعة في مجالات متعددة
+    </p>
+    <!-- الفقرة مع الكلاس lead لعرض مقدمة الصفحة -->
+    </div>
+    <!-- صورة السهم داخل كلاس header image -->
+    <div class="header_image">
+    <img src="8340683.png"> 
+    </div>
+   </header>
+   <!-- نهاية header -->
+    <!-- بداية section  -->
+    <section id="about">
+    <h1 class="about_title">أقسام اللعبة</h1>
+<!-- عنوان الرئيسي لعرض -->
+    <div class="contanire">
+    <article class="about_article">
+    <div class="about__inage">
+    <img src="10_-_Mosque.webp">
+    </div>
+    <!-- كل صورة داخل كلاس about image -->
+    <div class="about_content">
+      <!-- و كل كلاس about-content تحتوي على كلاس لعنوان و كلاس لفقرة + كلاس مخصصة لزر  btn+btn-primary-->
+    <h2 class="about_article-title"> ثقافة الاسلأمية</h2>
+    <p> أسئِلة تنموا معرفتك وثقافتكم الدينية إذا كنت من عشاق أسئلة دينية متنوعة لدينا أجمل تشكيلة تقدم لك معلومات رائعة في مجال الدين الإسلامي</p> 
+    <a href="projet web\islam.html" class="btn btn-primary">المزيد</a>
+    </div>
+    </article>
+    <!-- انشاء article لكل مجال  -->
+    <article class="about_article">
+        <div class="about_content">
+            <h2 class="about_article-title">ثقافة عامة</h2>
+            <p> أسئِلة في ثقافة عامة في مختلفة المجالات تشمل جوانب عدة </p> 
+            <a href="projet web\index.html" class="btn btn-primary">المزيد</a>
+        </div>
+        <div class="about__inage">
+        <img src="8485700.png">
+        </div>
+    </article>
+    <!-- اعادة لكل مجال مع القلب بين الصندوق الصورة و الصندوق المحتوى  
+    (الصندوق هو div)-->
+    <article class="about_article">
+        <div class="about_content">
+            <h2 class="about_article-title">علوم الحاسوب</h2>
+            <p> و لأننا في عصر السرعة نقدم لك كل ما يتعلق بعلوم الحاسوب: تمهيد من الانظمة تشغيل الى تقنيات حديثة، لفات برمجة و المزيد</p>        </p> 
+            <a href="projet web\computer.html" class="btn btn-primary">المزيد</a>
+        </div>
+        <div class="about__inage">
+            <img src="network.png">
+        </div>
+    </article>
+    <article class="about_article">
+        <div class="about__inage">
+            <img src="geo.png">
+        </div>
+        <div class="about_content">
+            <h2 class="about_article-title">الجغرافيا</h2>
+            <p> اليك افضل اسئلة جغرافية لإختبار معرفتك ستتعلم الكثير من الحقائق و المعلومات انطلاقا من اسئلة عامة ثقافية في الجغرافيا</p> 
+            <a href="projet web\geo.html" class="btn btn-primary">المزيد</a>
+        </div>
+    </article>
+    <article class="about_article">
+        <div class="about_content">
+            <h2 class="about_article-title">الرياضة</h2>
+            <p> الرياضة أساس للترفيه و تقوية الابدان نشارك معكم معلومات في مختلف الرياضات</p> 
+            <a href="C:\Users\Lenovo\Desktop\projet web\sport.html" class="btn btn-primary">المزيد</a>
+        </div>
+        <div class="about__inage">
+        <img src="8941955_gymming_gym_fitness_exercise_workout_icon.png">
+        </div>
+    </article>
+</section>
+<!-- نهاية section المجالات -->
+<!-- بداية section الاسئلة -->
+ <section id="faqs">
+    <h1> الأسئلة</h1>
+    <!-- عنوان الرئيسي  -->
+    <div class="container faqs__container">
+    <article class="faq">
+      <!-- كل article يحتوي 
+      على كلاس الرئيسي faq--qeustion-anwser -->
+      <div class="faq__question-answer">
+      <h4 class="faq__question"> <!-- السؤال -->
+    من نحن ؟ 
+      </h4>
+      <p class="faq__answer"> <!-- الاجابة -->
+        الطلاب بجبج عبد الرحمان و أيمن أسمر من جامعة سعد دحلب بليدة 1 فرع هندسة برمجيات مع خبرة متواضعة
+        "في مجال تطوير واجهات الويب "شهادات أسفل" 
+    </p>
+      </div>
+    </article>
+    
+    <article class="faq">
+
+      <div class="faq__question-answer">
+      <h4 class="faq__question">
+          خريطة الموقع 
+      </h4>
+      <p class="faq__answer">
+        لموقع عبارة عن مقدمة للعبة مع شريط العرض ثابت يتكون من شعار و عناوين الرئيسية و العرض مكون من أقسام اللعبة إضافة الى معلومات في الأسفل 
+      </p>
+      </div>
+    </article>
+    <!--إنشاء كلاس faq 
+    تحتو ي على كلاس الكبير
+  مقسم الى كلاس faq question > h4 + faq answer > p-->
+    <article class="faq">
+      <div class="faq__question-answer">
+      <h4 class="faq__question">
+        الهدف من اللعبة 
+      </h4>
+      <p class="faq__answer">
+        اللعبة تهدف الى إثراء المستخدم بمعلومات مفيدة في مجالات متنوعة، أسئِلة بسيطة و ممتعة في نفس الوقت 
+        نتمنى تجربة رائعة إن شاء الله
+      </p>
+      </div>
+    </article>
+    </div>
+  </section>
+  <!-- نهاية العرض -->
+ <footer id="contact">
+     <div class="container footer__container">
+<!-- كلاس الرئيسي -->
+        <div class="footer__1">
+          <h4> الراوبط</h4>
+          <ul class="permalinks">
+                 <li> <a href="mon.pdf">front end developer</a></li>
+              <li> <a href="diploma-HTMLCoderShiyar.pdf">html</h1></a></li>
+              <li> <a href="diploma-CSSCoderShiyar.pdf">css</a></li>
+          </ul>
+          <!-- كلاس يحتوي على العنوان مع عناصر القائمة فيه الشهادات -->
+        </div>
+
+
+
+        <div class="footer__2">  
+             <h4>تواصلوا معنا</h4>
+          <p> Email  here </p>
+             <ul class="footer_socials">
+                 <li> <a href="mailto:haniabderahmenhani@gmail.com">Email abderrahmen</li>
+              <li> <a href="mailto:hanilaroma16@gmail.com">Email aymen </li>
+              <!--كلاس يحتوي على عنوان مع رابط البريد  -->
+          </ul>
+        </div>
+   </div>
+
+    <div class="copyright">
+        <p> Created by bedjbedj and assmeur &copy; COPYRIGHT 2022 </p>
+        <!-- كلاس الحقوق المحفوظة -->
+    </div>
+
+    <h2 id="h2n">5</h2>
+</footer>
+<script src="quiz.js"></script>
+</body>
+</html>
